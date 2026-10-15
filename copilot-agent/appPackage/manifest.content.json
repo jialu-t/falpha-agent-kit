@@ -1,0 +1,21 @@
+{
+  "name": {
+    "short": "fAlpha",
+    "full": "fAlpha: explainable stock signals"
+  },
+  "description": {
+    "short": "Explainable model signals and research data for US stocks.",
+    "full": "fAlpha brings explainable machine-learning signals for US-listed stocks into Microsoft 365 Copilot.\n\nAsk for a stock's current reading and Copilot shows the equity indicator, the signal's own track record and the driver behind it, with the date the signal is for. Compare two stocks, review a past reading, see when a signal changed direction, or screen the covered stocks by signal or Sharpe ratio. News sentiment, analyst coverage, SEC filings and reported figures, the FRED macro backdrop and company fundamentals are available in the same conversation.\n\nEvery result names its source and the date its data is for. fAlpha is read-only and places no orders.\n\nA fAlpha account is required. fAlpha signals are model output, not investment advice."
+  },
+  "developer": {
+    "name": "fAlpha.ai, Inc.",
+    "websiteUrl": "https://falpha.ai",
+    "privacyUrl": "https://falpha.ai/confidentiality-and-privacy",
+    "termsOfUseUrl": "https://falpha.ai/terms"
+  },
+  "accentColor": "#FFFFFF",
+  "validDomains": [
+    "agent.falpha.ai",
+    "falpha.ai"
+  ]
+}

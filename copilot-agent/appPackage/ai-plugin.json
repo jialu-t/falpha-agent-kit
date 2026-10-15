@@ -1,0 +1,26 @@
+{
+  "schema_version": "v2.4",
+  "name_for_human": "fAlpha",
+  "namespace": "falpha",
+  "description_for_human": "Explainable model signals and research data for US stocks. Read-only.",
+  "description_for_model": "fAlpha research tools for US-listed stocks. Use them when the person asks what the model says about a stock, what drives a reading, how two stocks compare, when a signal changed direction, how a stock or its signal performed over a past range, which covered stocks rank highest on the signal, or for news sentiment, analyst coverage, SEC filings, reported fundamentals and the US macro backdrop. All tools are read-only. Results are model output and they are never investment advice.",
+  "contact_email": "info@falpha.ai",
+  "legal_info_url": "https://falpha.ai/terms",
+  "privacy_policy_url": "https://falpha.ai/confidentiality-and-privacy",
+  "functions": [],
+  "runtimes": [
+    {
+      "type": "RemoteMCPServer",
+      "auth": {
+        "type": "OAuthPluginVault",
+        "reference_id": "SET_BY_AGENTS_TOOLKIT"
+      },
+      "spec": {
+        "url": "https://agent.falpha.ai/mcp"
+      },
+      "run_for_functions": [
+        "*"
+      ]
+    }
+  ]
+}

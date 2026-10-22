@@ -1,12 +1,12 @@
-"""The ChatGPT plugin manifest (openai-plugin/plugin.json) against OpenAI's published limits."""
+"""The ChatGPT plugin manifest (codex-plugin/.codex-plugin/plugin.json) against OpenAI's published limits."""
 
 import json
 import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PLUGIN = ROOT / "openai-plugin"
-MANIFEST = json.loads((PLUGIN / "plugin.json").read_text())
+PLUGIN = ROOT / "codex-plugin"
+MANIFEST = json.loads((PLUGIN / ".codex-plugin" / "plugin.json").read_text())
 OPENAI = MANIFEST["extensions"]["com.openai"]
 INTERFACE = OPENAI["interface"]
 README_TOOLS = set(re.findall(r"^- \*\*(falpha_[a-z_]+)\*\*", (ROOT / "README.md").read_text(), re.M))
@@ -53,6 +53,6 @@ def test_no_purchase_or_advice_wording_in_the_listing():
 
 
 def test_mcp_config_points_at_the_hosted_server():
-    servers = json.loads((PLUGIN / "mcp.json").read_text())["mcpServers"]
+    servers = json.loads((PLUGIN / ".mcp.json").read_text())["mcpServers"]
     assert list(servers) == ["falpha"]
     assert servers["falpha"]["url"] == "https://agent.falpha.ai/mcp"
